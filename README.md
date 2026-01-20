@@ -16,7 +16,7 @@ g++-15 -O2 -std=c++17 -fopenmp task2.cpp -o task2
 Для сборки и запуска `task3_1.cpp` используйте следующие команды:
 
 ```bash
-g++-15 -O2 -std=c++20 -fopenmp task3_1.cpp -o task3_1
+g++-15 -std=c++20 -fopenmp task3_1.cpp -o task3_1
 ./task3_1
 ```
 
@@ -25,6 +25,15 @@ g++-15 -O2 -std=c++20 -fopenmp task3_1.cpp -o task3_1
 Для сборки и запуска `task3_2.cpp` используйте следующие команды:
 
 ```bash
-g++-15 -O2 -std=c++20 -fopenmp task3_2.cpp -o task3_2
+g++-15 -std=c++20 -fopenmp task3_2.cpp -o task3_2
 ./task3_2
+```
+
+## Сборка task4.cpp
+
+Для сборки и запуска `task4.cpp` используйте следующие команды:
+
+```bash
+g++-15 -std=c++20 -fopenmp task4.cpp -o task4
+./task4
 ```
