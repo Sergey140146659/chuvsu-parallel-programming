@@ -37,3 +37,35 @@ g++-15 -std=c++20 -fopenmp task3_2.cpp -o task3_2
 g++-15 -std=c++20 -fopenmp task4.cpp -o task4
 ./task4
 ```
+
+## Сборка task5.cpp
+
+Для сборки и запуска `task5.cpp` используйте следующие команды:
+
+```bash
+g++-15 -std=c++20 -fopenmp task5.cpp -o task5
+./task5
+```
+
+**Пример выполнения:**
+
+Input:
+```
+10
+1000
+```
+
+Output:
+```
+[1]: Sum = 49600
+[9]: Sum = 50400
+[4]: Sum = 49900
+[6]: Sum = 50100
+[3]: Sum = 49800
+[2]: Sum = 49700
+[8]: Sum = 50300
+[0]: Sum = 50500
+[7]: Sum = 50200
+[5]: Sum = 50000
+Sum = 500500
+```
