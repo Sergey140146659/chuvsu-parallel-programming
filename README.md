@@ -101,3 +101,54 @@ Output:
 [9]: Sum = 95050
 Sum = 500500
 ```
+
+## Сборка task7.cpp
+
+Для сборки и запуска `task7.cpp` используйте следующие команды:
+
+```bash
+g++-15 -O2 -std=c++20 -fopenmp task7.cpp -o task7
+./task7
+```
+
+**Пример выполнения (schedule(static, 2)):**
+
+Input:
+```
+4
+10
+```
+
+Output:
+```
+thread [1]: calculation of the iteration number <3>
+thread [1]: calculation of the iteration number <4>
+thread [2]: calculation of the iteration number <5>
+thread [2]: calculation of the iteration number <6>
+thread [3]: calculation of the iteration number <7>
+thread [3]: calculation of the iteration number <8>
+thread [0]: calculation of the iteration number <1>
+thread [0]: calculation of the iteration number <2>
+thread [0]: calculation of the iteration number <9>
+thread [0]: calculation of the iteration number <10>
+[1]: Sum = 7
+[0]: Sum = 22
+[2]: Sum = 11
+[3]: Sum = 15
+Sum = 55
+```
+
+**Распределение итераций по потокам для разных типов schedule:**
+
+| Номер итерации | static | static, 1 | static, 2 | dynamic | dynamic, 2 | guided | guided, 2 |
+|---------------:|-------:|----------:|----------:|--------:|-----------:|-------:|----------:|
+| 1  | 0 | 0 | 0 | 2 | 1 | 1 | 2 |
+| 2  | 0 | 1 | 0 | 1 | 1 | 1 | 2 |
+| 3  | 0 | 2 | 1 | 0 | 0 | 1 | 2 |
+| 4  | 1 | 3 | 1 | 3 | 0 | 0 | 0 |
+| 5  | 1 | 0 | 2 | 2 | 2 | 0 | 0 |
+| 6  | 1 | 1 | 2 | 2 | 2 | 2 | 1 |
+| 7  | 2 | 2 | 3 | 2 | 3 | 2 | 1 |
+| 8  | 2 | 3 | 3 | 2 | 3 | 3 | 3 |
+| 9  | 3 | 0 | 0 | 0 | 1 | 1 | 3 |
+| 10 | 3 | 1 | 0 | 0 | 1 | 1 | 2 |
