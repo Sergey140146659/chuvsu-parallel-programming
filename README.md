@@ -227,3 +227,44 @@ serial: 8.88607 sec
 parallel: 1.91855 sec
 OK
 ```
+
+## Сборка task10.cpp
+
+Для сборки и запуска `task10.cpp` используйте следующие команды:
+
+```bash
+g++-15 -O2 -std=c++20 -fopenmp task10.cpp -o task10
+./task10
+```
+
+**Примеры выполнения:**
+
+Input: `2`
+```
+[0]: came in section 1
+[0]: came in section 3
+[1]: came in section 2
+[0]: parallel region
+[1]: parallel region
+```
+
+Input: `3`
+```
+[1]: came in section 1
+[0]: came in section 2
+[2]: came in section 3
+[1]: parallel region
+[0]: parallel region
+[2]: parallel region
+```
+
+Input: `4`
+```
+[2]: came in section 1
+[1]: came in section 2
+[0]: came in section 3
+[1]: parallel region
+[0]: parallel region
+[2]: parallel region
+[3]: parallel region
+```
