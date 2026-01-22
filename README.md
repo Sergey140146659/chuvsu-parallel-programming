@@ -7,7 +7,7 @@
 Для сборки и запуска `task2.cpp` используйте следующие команды:
 
 ```bash
-g++-15 -O2 -std=c++17 -fopenmp task2.cpp -o task2
+g++-15 -std=c++17 -fopenmp task2.cpp -o task2
 ./task2
 ```
 
@@ -75,7 +75,7 @@ Sum = 500500
 Для сборки и запуска `task6.cpp` используйте следующие команды:
 
 ```bash
-g++-15 -O2 -std=c++20 -fopenmp task6.cpp -o task6
+g++-15 -std=c++20 -fopenmp task6.cpp -o task6
 ./task6
 ```
 
@@ -107,7 +107,7 @@ Sum = 500500
 Для сборки и запуска `task7.cpp` используйте следующие команды:
 
 ```bash
-g++-15 -O2 -std=c++20 -fopenmp task7.cpp -o task7
+g++-15 -std=c++20 -fopenmp task7.cpp -o task7
 ./task7
 ```
 
@@ -158,7 +158,7 @@ Sum = 55
 Для сборки и запуска `task8.cpp` используйте следующие команды:
 
 ```bash
-g++-15 -O2 -std=c++20 -fopenmp task8.cpp -o task8
+g++-15 -std=c++20 -fopenmp task8.cpp -o task8
 ./task8
 ```
 
@@ -184,7 +184,7 @@ Pi = 3.1415926535898633
 Для сборки и запуска `task9.cpp` используйте следующие команды:
 
 ```bash
-g++-15 -O2 -std=c++20 -fopenmp task9.cpp -o task9
+g++-15 -std=c++20 -fopenmp task9.cpp -o task9
 ./task9
 ```
 
@@ -210,7 +210,7 @@ Output:
 Для сборки и запуска `task9_test.cpp` используйте следующие команды:
 
 ```bash
-g++-15 -O2 -std=c++20 -fopenmp task9_test.cpp -o task9_test
+g++-15 -std=c++20 -fopenmp task9_test.cpp -o task9_test
 ./task9_test
 ```
 
@@ -233,7 +233,7 @@ OK
 Для сборки и запуска `task10.cpp` используйте следующие команды:
 
 ```bash
-g++-15 -O2 -std=c++20 -fopenmp task10.cpp -o task10
+g++-15 -std=c++20 -fopenmp task10.cpp -o task10
 ./task10
 ```
 
@@ -267,4 +267,36 @@ Input: `4`
 [0]: parallel region
 [2]: parallel region
 [3]: parallel region
+```
+
+## Сборка task11.cpp
+
+Для сборки и запуска `task11.cpp` используйте следующие команды:
+
+```bash
+g++-15 -std=c++20 -fopenmp task11.cpp -o task11
+./task11
+```
+
+**Пример выполнения:**
+
+Input:
+```
+10
+1000
+```
+
+Output:
+```
+[2]: Sum = 25050
+[3]: Sum = 35050
+[1]: Sum = 15050
+[5]: Sum = 55050
+[6]: Sum = 65050
+[4]: Sum = 45050
+[7]: Sum = 75050
+[8]: Sum = 85050
+[0]: Sum = 5050
+[9]: Sum = 95050
+Sum = 500500
 ```
