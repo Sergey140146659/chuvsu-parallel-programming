@@ -507,3 +507,22 @@ I am 0 process from 3 processes!
 I am 2 process from 3 processes!
 I am 1 process from 3 processes!
 ```
+
+### Сборка task16.cpp
+
+Для сборки и запуска `task16.cpp` используйте следующие команды:
+
+```bash
+mpic++ -std=c++20 task16.cpp -o task16
+export FI_PROVIDER=tcp
+mpirun -n 4 ./task16
+```
+
+**Пример выполнения:**
+
+```
+4 processes.
+I am 1 process: FIRST!
+I am 2 process: SECOND!
+I am 3 process: FIRST!
+```
