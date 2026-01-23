@@ -486,3 +486,24 @@ python3 task13.py
 **График зависимости времени выполнения от количества потоков:**
 
 ![Pi (critical): Time vs Threads](task13/exp_task12/pi_critical_time_vs_threads.png)
+
+
+## 2. Технология программирования MPI
+
+### Сборка task15.cpp
+
+Для сборки и запуска `task15.cpp` используйте следующие команды:
+
+```bash
+mpic++ -std=c++20 task15.cpp -o task15
+export FI_PROVIDER=tcp
+mpirun -n 3 ./task15
+```
+
+**Пример выполнения:**
+
+```
+I am 0 process from 3 processes!
+I am 2 process from 3 processes!
+I am 1 process from 3 processes!
+```
