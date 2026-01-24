@@ -526,3 +526,20 @@ I am 1 process: FIRST!
 I am 2 process: SECOND!
 I am 3 process: FIRST!
 ```
+
+### Сборка task17.cpp
+
+Для сборки и запуска `task17.cpp` используйте следующие команды:
+
+```bash
+mpic++ -std=c++20 task17.cpp -o task17
+export FI_PROVIDER=tcp
+mpirun -n 2 ./task17
+```
+
+**Пример выполнения:**
+
+```
+process 0 send message with number: 45
+process 1 receive message with number: 45
+```
