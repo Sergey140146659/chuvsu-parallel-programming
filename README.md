@@ -562,3 +562,21 @@ mpirun -n 4 ./task18
 [3]: receive message '2'
 [0]: receive message '3'
 ```
+
+### Сборка task19.cpp
+
+Для сборки и запуска `task19.cpp` используйте следующие команды:
+
+```bash
+mpic++ -std=c++20 task19.cpp -o task19
+export FI_PROVIDER=tcp
+mpirun -n 4 ./task19
+```
+
+**Пример выполнения:**
+
+```
+[0]: receive message '2' from 2
+[0]: receive message '3' from 3
+[0]: receive message '1' from 1
+```
