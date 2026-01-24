@@ -597,3 +597,22 @@ mpirun -n 2 ./task20
 process 0 send message with number: 45
 process 1 receive message with number: 45
 ```
+
+### Сборка task21.cpp
+
+Для сборки и запуска `task21.cpp` используйте следующие команды:
+
+```bash
+mpic++ -std=c++20 task21.cpp -o task21
+export FI_PROVIDER=tcp
+mpirun -n 4 ./task21
+```
+
+**Пример выполнения:**
+
+```
+[0]: receive message '3'
+[1]: receive message '0'
+[2]: receive message '1'
+[3]: receive message '2'
+```
