@@ -616,3 +616,24 @@ mpirun -n 4 ./task21
 [2]: receive message '1'
 [3]: receive message '2'
 ```
+
+### Сборка task22.cpp
+
+Для сборки и запуска `task22.cpp` используйте следующие команды:
+
+```bash
+mpic++ -std=c++20 task22.cpp -o task22
+export FI_PROVIDER=tcp
+mpirun -n 3 ./task22
+```
+
+**Пример выполнения:**
+
+```
+[0]: receive message '2' from 2
+[0]: receive message '1' from 1
+[1]: receive message '0' from 0
+[1]: receive message '2' from 2
+[2]: receive message '1' from 1
+[2]: receive message '0' from 0
+```
