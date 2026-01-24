@@ -637,3 +637,37 @@ mpirun -n 3 ./task22
 [2]: receive message '1' from 1
 [2]: receive message '0' from 0
 ```
+
+### Сборка task23.cpp
+
+Для сборки и запуска `task23.cpp` используйте следующие команды:
+
+```bash
+mpic++ -std=c++20 task23.cpp -o task23
+export FI_PROVIDER=tcp
+mpirun -n 3 ./task23
+```
+
+**Примеры выполнения:**
+
+Input: `9`, `aaaaaaaaa`
+```
+a = 9
+```
+
+Input: `6`, `rvtabc`
+```
+a = 1
+b = 1
+c = 1
+r = 1
+t = 1
+v = 1
+```
+
+Input: `9`, `aaabbbccc`
+```
+a = 3
+b = 3
+c = 3
+```
