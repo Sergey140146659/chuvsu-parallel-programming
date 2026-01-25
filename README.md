@@ -640,12 +640,46 @@ mpirun -n 3 ./task22
 
 ### Сборка task23.cpp
 
-Для сборки и запуска `task23.cpp` используйте следующие команды:
+Для сборки и запуска `task23_1.cpp` используйте следующие команды:
 
 ```bash
-mpic++ -std=c++20 task23.cpp -o task23
+mpic++ -std=c++20 task23_1.cpp -o task23_1
 export FI_PROVIDER=tcp
-mpirun -n 3 ./task23
+mpirun -n 3 ./task23_1
+```
+
+**Примеры выполнения:**
+
+Input: `9`, `aaaaaaaaa`
+```
+a = 9
+```
+
+Input: `6`, `rvtabc`
+```
+a = 1
+b = 1
+c = 1
+r = 1
+t = 1
+v = 1
+```
+
+Input: `9`, `aaabbbccc`
+```
+a = 3
+b = 3
+c = 3
+```
+
+### Сборка task23_2.cpp
+
+Для сборки и запуска `task23_2.cpp` используйте следующие команды:
+
+```bash
+mpic++ -std=c++20 task23_2.cpp -o task23_2
+export FI_PROVIDER=tcp
+mpirun -n 3 ./task23_2
 ```
 
 **Примеры выполнения:**
