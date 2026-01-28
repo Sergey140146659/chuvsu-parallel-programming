@@ -796,3 +796,43 @@ Output:
 ```
 
 `MPI_Scatter` и `MPI_Gather` быстрее, чем обмен по схеме точка-точка (point-to-point).
+
+### Сборка task26.cpp
+
+Для сборки и запуска `task26.cpp` используйте следующие команды:
+
+```bash
+mpic++ -std=c++20 task26.cpp -o task26
+export FI_PROVIDER=tcp
+mpirun -n 5 ./task26
+```
+
+**Пример выполнения:**
+
+Input:
+```
+text
+```
+
+Output:
+```
+MPI_COMM_WORLD: 1 from 5.
+New comm: -1 from 0.
+Message = no
+
+MPI_COMM_WORLD: 3 from 5.
+New comm: -1 from 0.
+Message = no
+
+MPI_COMM_WORLD: 0 from 5.
+New comm: 0 from 3.
+Message = text
+
+MPI_COMM_WORLD: 2 from 5.
+New comm: 1 from 3.
+Message = text
+
+MPI_COMM_WORLD: 4 from 5.
+New comm: 2 from 3.
+Message = text
+```
