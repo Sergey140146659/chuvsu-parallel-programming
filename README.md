@@ -740,3 +740,59 @@ mpirun -n 5 ./task24_2
 ```
 
 `MPI_Reduce` быстрее, чем обмен по схеме точка-точка (point-to-point).
+
+### Сборка task25_1.cpp
+
+Для сборки и запуска `task25_1.cpp` используйте следующие команды:
+
+```bash
+mpic++ -std=c++20 task25_1.cpp -o task25_1
+export FI_PROVIDER=tcp
+mpirun -n 2 ./task25_1
+```
+
+**Пример выполнения:**
+
+Input:
+```
+2
+1 3
+4 8
+5 4
+3 0
+```
+
+Output:
+```
+14 4
+44 16
+```
+
+### Сборка task25_2.cpp
+
+Для сборки и запуска `task25_2.cpp` используйте следующие команды:
+
+```bash
+mpic++ -std=c++20 task25_2.cpp -o task25_2
+export FI_PROVIDER=tcp
+mpirun -n 2 ./task25_2
+```
+
+**Пример выполнения:**
+
+Input:
+```
+2
+1 3
+4 8
+5 4
+3 0
+```
+
+Output:
+```
+14 4
+44 16
+```
+
+`MPI_Scatter` и `MPI_Gather` быстрее, чем обмен по схеме точка-точка (point-to-point).
