@@ -836,3 +836,25 @@ MPI_COMM_WORLD: 4 from 5.
 New comm: 2 from 3.
 Message = text
 ```
+
+### Сборка task28.cpp
+
+Для сборки и запуска `task28.cpp` используйте следующие команды:
+
+```bash
+mpic++ -std=c++20 task28.cpp -o task28
+export FI_PROVIDER=tcp
+mpirun -n 5 ./task28
+```
+
+**Пример выполнения:**
+
+Input:
+```
+1000000000
+```
+
+Output:
+```
+3.14159265
+```
