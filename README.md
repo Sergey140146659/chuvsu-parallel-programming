@@ -898,3 +898,61 @@ mpirun -n 4 ./task29
 **График масштабируемости MPI (Speedup):**
 
 ![MPI Scalability](mpi_time_scalability.png)
+
+### Сборка task31.cpp
+
+Для сборки и запуска `task31.cpp` под macos используйте следующие команды:
+
+```bash
+brew install open-mpi libomp llvm
+echo 'export PATH="/opt/homebrew/opt/llvm/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
+mpic++ -std=c++20 task31.cpp -o task31 \
+  -Xpreprocessor -fopenmp \
+  -I"$(brew --prefix libomp)/include" \
+  -L"$(brew --prefix libomp)/lib" -lomp
+export FI_PROVIDER=tcp
+mpirun -n 2 ./task31
+```
+
+**Пример выполнения:**
+
+Input:
+```
+3
+```
+
+Output:
+```
+I am 0 thread from 0 process. Number of hybrid threads = 6.
+I am 1 thread from 0 process. Number of hybrid threads = 6.
+I am 0 thread from 1 process. Number of hybrid threads = 6.
+I am 1 thread from 1 process. Number of hybrid threads = 6.
+I am 2 thread from 1 process. Number of hybrid threads = 6.
+I am 2 thread from 0 process. Number of hybrid threads = 6.
+```
+
+### Сборка task32.cpp
+
+Для сборки и запуска `task32.cpp` используйте следующие команды:
+
+```bash
+mpic++ -std=c++20 task32.cpp -o task32 \
+  -Xpreprocessor -fopenmp \
+  -I"$(brew --prefix libomp)/include" \
+  -L"$(brew --prefix libomp)/lib" -lomp
+export FI_PROVIDER=tcp
+mpirun -n 5 ./task32
+```
+
+**Пример выполнения:**
+
+Input:
+```
+1000000000
+```
+
+Output:
+```
+3.141592653589785
+```
